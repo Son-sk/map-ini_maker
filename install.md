@@ -1,11 +1,11 @@
-# pip pkg¼³Ä¡
-- È¯°æº¯¼ö ¼³Á¤
-  ³»ÄÄÇ»ÅÍ - °í±Þ½Ã½ºÅÛ¼Ó¼º - È¯°æº¯¼ö - ½Ã½ºÅÛº¯¼ö - path ¼³Á¤
+# pip pkgï¿½ï¿½Ä¡
+- È¯ï¿½æº¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+  ï¿½ï¿½ï¿½ï¿½Ç»ï¿½ï¿½ - ï¿½ï¿½ï¿½Þ½Ã½ï¿½ï¿½Û¼Ó¼ï¿½ - È¯ï¿½æº¯ï¿½ï¿½ - ï¿½Ã½ï¿½ï¿½Ûºï¿½ï¿½ï¿½ - path ï¿½ï¿½ï¿½ï¿½
   C:\Users\'username'\AppData\Local\Programs\Python\Python39\Scripts
-- Window CMD ½ÇÇà
-- °æ·ÎÀÌµ¿: cd C:\Users\'username'\AppData\Local\Programs\Python\Python39\Scripts
-- curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py `[pip ´Ù¿î·Îµå]`
-- python get-pip.py `[pip ¼³Ä¡]`
+- Window CMD ï¿½ï¿½ï¿½ï¿½
+- ï¿½ï¿½ï¿½ï¿½Ìµï¿½: cd C:\Users\'username'\AppData\Local\Programs\Python\Python39\Scripts
+- curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py `[pip ï¿½Ù¿ï¿½Îµï¿½]`
+- python get-pip.py `[pip ï¿½ï¿½Ä¡]`
 
  - pip install pyqt5 
  - pip install pyqt5-tool `qt designer`
@@ -13,7 +13,9 @@
 
 
 C:\Users\'username'\AppData\Local\Programs\Python\Python39\Lib\site-packages\PySide2
--> designer.exe ½ÇÇà `GUI Design`
+-> designer.exe ï¿½ï¿½ï¿½ï¿½ `GUI Design`
 
+UI Conversion
+ - pyuic5 -x C:\Users\Son\Documents\map-ini_maker\uit.ui -o C:\Users\Son\Documents\map-ini_maker\uit.py
 
 
