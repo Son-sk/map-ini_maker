@@ -14,3 +14,6 @@ UI Conversion
  - pyuic5 -x C:\Users\Son\Documents\map-ini_maker\uit.ui -o C:\Users\Son\Documents\map-ini_maker\uit.py
 
 
+pyinstaller --icon=test.ico --onefile --noconsole test.py `icon add`
+
+

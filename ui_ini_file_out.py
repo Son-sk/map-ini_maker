@@ -38,8 +38,6 @@ def start (ini_file, map_file, save_file) :
                     break
                 i+=1
 
-        #if len(map_read_split_x) == 2 :
-
             i=0
             while i < len(check_address_name) :
 
@@ -51,13 +49,11 @@ def start (ini_file, map_file, save_file) :
                             map_add_print = map_read_split_x[name_no-1][1:5]
                             map_change_address.append(map_add_print) # map file address
                             map_change_name.append(map_read_split_x_name) # map file name
-                            break
 
                 i+=1
             
     map.close()
 
-    # write
     ini_new = open(save_file, 'w')
     #ini = open('ini_test.txt', 'r')
     ini = open(ini_file, 'r')
