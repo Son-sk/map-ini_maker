@@ -51,15 +51,7 @@ while map_read :
         
 map.close()
 
-print("ini addres name: ")
-print(check_address_name)
-print(len(check_address_name))
-print("map addres name: ")
-print(map_change_name)
-print(len(map_change_name))
-print("map addres: ")
-print(map_change_address)
-#print(len(map_change_address))
+
 
 print("Match %d MAP addresses of %d INI addresses."%(len(map_change_name),len(check_address_name)))
 
@@ -95,11 +87,21 @@ while ini_read :
             i+=1
 
         if flag == 0  : #not find map_change_name : Outputs just like "ini file"
-            ini_new.write(ini_read+'r')
+            ini_new.write(ini_read)
 
     else :
-        ini_new.write(ini_read+'x')
+        ini_new.write(ini_read)
 
 ini.close()
 ini_new.close()
+
+print("ini addres name: ")
+print(check_address_name)
+print(len(check_address_name))
+print("map addres name: ")
+print(map_change_name)
+print(len(map_change_name))
+print("map addres: ")
+print(map_change_address)
+#print(len(map_change_address))
 
