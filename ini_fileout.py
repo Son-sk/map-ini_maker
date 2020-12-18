@@ -3,6 +3,7 @@ check_address_name = []
 map_change_address = []
 map_change_name = []
 map_read_split_x_name = 0
+name_no = 0
 
 #ini = open('ini_test.txt', 'r')
 ini = open('test2.ini', 'r')
@@ -41,11 +42,12 @@ while map_read :
         while i < len(check_address_name) :
 
             if check_address_name[i] == map_read_split_x_name :
-
-                if len(map_read_split_x[name_no-1]) == 6 :
-                    map_add_print = map_read_split_x[name_no-1][1:5]
-                    map_change_address.append(map_add_print) # map file address
-                    map_change_name.append(map_read_split_x_name) # map file name
+                if map_read_split_x_name in map_change_name :
+                    pass
+                    if len(map_read_split_x[name_no-1]) == 6 :
+                        map_add_print = map_read_split_x[name_no-1][1:5]
+                        map_change_address.append(map_add_print) # map file address
+                        map_change_name.append(map_read_split_x_name) # map file name
 
             i+=1
         
