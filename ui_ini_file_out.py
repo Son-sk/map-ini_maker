@@ -8,7 +8,7 @@ def start (ini_file, map_file, save_file) :
     name_no = 0
 
     #ini = open('ini_test.txt', 'r')
-    ini = open(ini_file, 'r')
+    ini = open(ini_file, 'r', encoding='cp949')
     ini_read = ini.readline()
 
     while ini_read :
@@ -54,9 +54,9 @@ def start (ini_file, map_file, save_file) :
             
     map.close()
 
-    ini_new = open(save_file, 'w')
+    ini_new = open(save_file, 'w', encoding='cp949')
     #ini = open('ini_test.txt', 'r')
-    ini = open(ini_file, 'r')
+    ini = open(ini_file, 'r', encoding='cp949')
 
     ini_read = ini.readline()
     while ini_read :

@@ -148,6 +148,12 @@ class MainWindow(QMainWindow):
 
         self.textEdit.setText(str(data))
         self.textEdit.append(str(text))
+
+        self.msg.setIcon(QMessageBox.Information)
+        self.msg.setWindowTitle('Finish!')
+        self.msg.setText(str(text))
+        self.msg.setStandardButtons(QMessageBox.Ok)
+        self.msg.exec_()
         #self.disable_but(self.pb_clicked)
 
     # disable button 함수 호출    
