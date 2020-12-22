@@ -17,7 +17,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         # window setting
         self.setGeometry(500, 500, 650, 500)  # x, y, w, h
-        self.setWindowTitle('INI-Maker V1.0')
+        self.setWindowTitle('INI-Maker V1.01')
 
         # ---------- Menun bar add ---------------
         # Create new action INI Open
@@ -34,7 +34,7 @@ class MainWindow(QMainWindow):
 
         savefile_action = QAction(QIcon('save.png'), '&Save File', self)
         savefile_action.setShortcut('Ctrl+S')
-        savefile_action.setStatusTip('Save File Select')
+        savefile_action.setStatusTip('Save File Path')
         savefile_action.triggered.connect(self.savefile_call)
 
         # Exit action
@@ -74,13 +74,13 @@ class MainWindow(QMainWindow):
         self.disable_but(self.pb_clicked)
 
         # QLabel 설정
-        self.pathLabel = QLabel('INI Path : ', self)
+        self.pathLabel = QLabel('INI File Path : ', self)
         self.pathLabel.setGeometry(10, 60, 600, 50)
 
-        self.pathLabe2 = QLabel('MAP Path : ', self)
+        self.pathLabe2 = QLabel('MAP File Path : ', self)
         self.pathLabe2.setGeometry(10, 80, 600, 50)
 
-        self.pathLabe3 = QLabel('SAVE File Path : ', self)
+        self.pathLabe3 = QLabel('SAVE Path : ', self)
         self.pathLabe3.setGeometry(10, 100, 600, 50)
 
         # QTextEdit 파일 읽은 내용 표시
@@ -96,7 +96,7 @@ class MainWindow(QMainWindow):
         global ininame 
         ininame = QFileDialog.getOpenFileName(self, 'Open File', '',
                                             'INI File(*.ini)')
-        self.pathLabel.setText('INI Path : '+ininame[0])
+        self.pathLabel.setText('INI File Path : '+ininame[0])
         if len(ininame[0]) == 0 :
             ininame = None
         self.button_set()
@@ -108,7 +108,7 @@ class MainWindow(QMainWindow):
         global mapname  
         mapname = QFileDialog.getOpenFileName(self, 'Open File', '',
                                             'MAP File(*.map)')
-        self.pathLabe2.setText('MAP Path : '+mapname[0])
+        self.pathLabe2.setText('MAP File Path : '+mapname[0])
         if len(mapname[0]) == 0 :
             mapname = None
         self.button_set()
@@ -120,7 +120,7 @@ class MainWindow(QMainWindow):
         global savename
         savename = QFileDialog.getSaveFileName(self, 'Save File', '',
                                             'INI File(*.ini)')
-        self.pathLabe3.setText('SAVE File Path : '+savename[0])
+        self.pathLabe3.setText('SAVE Path : '+savename[0])
         if len(savename[0]) == 0 :
             savename = None
         self.button_set()
@@ -148,6 +148,7 @@ class MainWindow(QMainWindow):
 
         self.textEdit.setText(str(data))
         self.textEdit.append(str(text))
+
 
         self.msg.setIcon(QMessageBox.Information)
         self.msg.setWindowTitle('Finish!')

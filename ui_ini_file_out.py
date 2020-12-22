@@ -4,6 +4,7 @@ def start (ini_file, map_file, save_file) :
     check_address_name = []
     map_change_address = []
     map_change_name = []
+    ini_change_lable = []
     map_read_split_x_name = 0
     name_no = 0
 
@@ -63,6 +64,8 @@ def start (ini_file, map_file, save_file) :
 
         ini_read = ini.readline()
         ini_read_split = ini_read.split(',')
+        # ini_read_split_s = ini_read_split.split(' ')
+        # ini_read_split_x = [x for x in ini_read_split_s if x]
         
         if len(ini_read_split) == 13 :
             i=0
@@ -73,6 +76,9 @@ def start (ini_file, map_file, save_file) :
                 if ini_read_split[7] == map_change_name[i] : 
                     ini_write = ini_read_split[0][0:4]+map_change_address[i]
                     ini_read_split[0] = ini_write
+
+                    ini_read_split_x = ini_read_split[1].strip()
+                    ini_change_lable.append(ini_read_split_x) 
                     
                     for out in ini_read_split :
                         if out != ini_read_split[len(ini_read_split)-1] :                    
@@ -101,8 +107,9 @@ def start (ini_file, map_file, save_file) :
     # print(len(map_change_name))
     # print("map addres: ")
     # print(map_change_address)
-    data = "INI ADDRESS NAME(%d):\n %s \n\nMATCH MAP ADDRESS NAME(%d):\n %s \n\nMATCH MAP ADDRESS(%d):\n %s\n" % (len(check_address_name), check_address_name, 
-    len(map_change_name), map_change_name, len(map_change_address), map_change_address)
+    data = "INI ADDRESS NAME(%d):\n %s \n\nMATCH MAP ADDRESS NAME(%d):\n %s \n\nMATCH MAP ADDRESS(%d):\n %s\n\n MAP ADDRESS CHANGED LABLE(%d):\n %s\n "% (
+        len(check_address_name), check_address_name, len(map_change_name), map_change_name, 
+        len(map_change_address), map_change_address, len(ini_change_lable), ini_change_lable)
     text = "Match %d MAP addresses of %d INI addresses."%(len(map_change_name),len(check_address_name))
     return [data, text]
 
