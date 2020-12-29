@@ -6,4 +6,4 @@
 
 # 주요파일
 - ini_fileout.py
-- ini_maker_main.py
+- ui_ini_file_out.py
