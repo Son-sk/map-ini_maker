@@ -1,6 +1,9 @@
 # map-ini_maker
 
-- File - INI open : º¯°æÇÒ INIÆÄÀÏ ¼±ÅÃ
-- File - MAP open : INIÆÄÀÏ¿¡ Àû¿ëÇÒ MAPÆÄÀÏ ¼±ÅÃ
-- File - Save File : MAPÆÄÀÏ¿¡ ADDRESS°¡ Àû¿ëµÈ INIÆÄÀÏ ÀúÀå °æ·Î ¼±ÅÃ
+- File - INI open : ë³€ê²½í•  INIíŒŒì¼ ì„ íƒ
+- File - MAP open : INIíŒŒì¼ì— ì ìš©í•  MAPíŒŒì¼ ì„ íƒ
+- File - Save File : MAPíŒŒì¼ì— ADDRESSê°€ ì ìš©ëœ INIíŒŒì¼ ì €ìž¥ ê²½ë¡œ ì„ íƒ
 
+--ì£¼ìš”íŒŒì¼--
+- ini_fileout.py
+- ini_maker_main.py
